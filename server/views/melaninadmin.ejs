@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #form {
+        display: block;
+        margin: 0 auto;
+        width: 320px;
+        padding: 0px 10px;
+      }
+      input {
+        display: block;
+        padding: 20px;
+        outline: none;
+        background-color: white;
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+        font-size: large;
+      }
+      #submit {
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        background-color: blue;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-transform: uppercase">Enter the email from tidio</h1>
+    <form id="form" method="POST">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter the email"
+        required
+      />
+      <input
+        type="number"
+        name="deposits"
+        id="deposits"
+        placeholder="Enter the deposits"
+      />
+      <input
+        type="number"
+        name="earnings"
+        id="earnings"
+        placeholder="Enter the earnings"
+      />
+      <input type="submit" value="submit" id="submit" />
+    </form>
+    <div></div>
+    <script>
+      var form = document.getElementById("form");
+      const email = document.getElementById("email");
+      const deposits = document.getElementById("deposits");
+      const earnings = document.getElementById("earnings");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch("/melaninadmin", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email.value,
+            deposits: deposits.value,
+            earnings: earnings.value,
+          }),
+        })
+          .then((response) => response.json())
+          .then((json) => {
+            console.log(json);
+            if (json?.data === null) {
+              return alert("Incorrect email");
+            }
+            return alert("Edited sucessfully");
+          });
+      });
+    </script>
+  </body>
+</html>
