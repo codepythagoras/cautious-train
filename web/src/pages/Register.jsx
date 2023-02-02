@@ -51,8 +51,10 @@ const Register = () => {
 
     axios
       .post(
-        `http://localhost:4000/auth/register?ref=${query.get("ref")}`,
-        // `http://localhost:4000/auth/register?ref=${query.get("ref")}`,
+        `https://cryptoboomserver.onrender.com/auth/register?ref=${query.get(
+          "ref"
+        )}`,
+        // `https://cryptoboomserver.onrender.com/auth/register?ref=${query.get("ref")}`,
         formInput
       )
       .then((res) => {

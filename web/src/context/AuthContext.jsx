@@ -49,8 +49,8 @@ const AuthContextProvider = ({ children }) => {
     }
 
     return axios.get(
-      `http://localhost:4000/auth/getUser?_id=${user._id}`
-      // `http://localhost:4000/auth/getUser?_id=${user._id}`
+      `https://cryptoboomserver.onrender.com/auth/getUser?_id=${user._id}`
+      // `https://cryptoboomserver.onrender.com/auth/getUser?_id=${user._id}`
     );
   };
 
