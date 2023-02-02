@@ -10,8 +10,8 @@ import User from "./models/User.js";
   await config();
   await mongoose
     .connect(
-      // "mongodb+srv://globalcrypto:globalPass@globalcrypto.yjvfp.mongodb.net/globalcrypto?retryWrites=true&w=majority"
-      "mongodb://localhost:27017/globalcrypto"
+      "mongodb+srv://austingooday80:austing@cluster0.huckvmt.mongodb.net/globalcrypto?retryWrites=true&w=majority"
+      // "mongodb://localhost:27017/globalcrypto"
     )
     .then(() => {
       console.log("Database Connected");
