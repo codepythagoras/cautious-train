@@ -23,7 +23,8 @@
     "react-scripts": "4.0.3",
     "serverless-http": "^2.7.0",
     "swiper": "^7.0.6",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "craco start",
