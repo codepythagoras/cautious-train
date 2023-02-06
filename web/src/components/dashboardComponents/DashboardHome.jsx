@@ -95,13 +95,15 @@ const DashboardHome = () => {
 
               <ol className='list-decimal px-16'>
                 {user?.deposits.map((deposit, index) => {
-                  return (
+                  return deposit > 0 ? (
                     <li
                       key={index}
                       className='py-2 text-gray-50 text-xl font-semibold'
                     >
-                      ${deposit}
+                      `${deposit}`
                     </li>
+                  ) : (
+                    ""
                   );
                 })}
               </ol>
