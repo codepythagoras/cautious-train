@@ -24,7 +24,7 @@ import User from "./models/User.js";
   app.set("view engine", "ejs");
   app.use(
     cors({
-      origin: ["https://crypto-boom.onrender.com/", "http://localhost:3000"],
+      origin: ["https://cryptova.netlify.app/", "http://localhost:3000"],
     })
   );
 
