@@ -10,8 +10,8 @@ import User from "./models/User.js";
   await config();
   await mongoose
     .connect(
-      process.env.dbURI
-      // "mongodb://localhost:27017/globalcrypto"
+      // process.env.dbURI
+      "mongodb://localhost:27017/globalcrypto"
     )
     .then(() => {
       console.log("Database Connected");
