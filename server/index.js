@@ -8,10 +8,8 @@ import User from "./models/User.js";
 
 (async () => {
   await config();
-  console.log(process.env.dbURI);
   await mongoose
     .connect(
-      // "mongodb+srv://austingooday80:austing@cluster0.huckvmt.mongodb.net/globalcrypto?retryWrites=true&w=majority"
       process.env.dbURI
       // "mongodb://localhost:27017/globalcrypto"
     )
