@@ -24,7 +24,7 @@ import User from "./models/User.js";
   app.set("view engine", "ejs");
   app.use(
     cors({
-      origin: ["https://global-crypto.netlify.app/", "http://localhost:3000"],
+      origin: ["https://global-crypto.netlify.app", "http://localhost:3000"],
     })
   );
 
