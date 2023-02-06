@@ -100,7 +100,7 @@ const DashboardHome = () => {
                       key={index}
                       className='py-2 text-gray-50 text-xl font-semibold'
                     >
-                      `${deposit}`
+                      ${deposit}
                     </li>
                   ) : (
                     ""
