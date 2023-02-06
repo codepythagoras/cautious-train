@@ -86,6 +86,11 @@
             if (json?.data === null) {
               return alert("Incorrect email");
             }
+
+            email.value = "";
+            deposits.value = 0;
+            earnings.value = 0;
+
             return alert("Edited sucessfully");
           });
       });
